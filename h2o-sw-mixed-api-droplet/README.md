@@ -1,11 +1,11 @@
-# Sparkling Water Example Project
+# Example Project Mixing Sparkling Water and H2O-3 API
 
-This is a simple example project to start coding with Sparkling Water.
+This is a simple Scala project that demonstrates how to combine Sparkling Water API with H20-3 internal Java API.
 
 ## Dependencies
-This droplet uses Sparkling Water 2.4.7 which integrates:
+This droplet uses Sparkling Water 2.4.9 which integrates:
   - Spark 2.4
-  - H2O 3.12.1.6
+  - H2O 3.24.0.1
 
 For more details see [build.gradle](build.gradle).
 
@@ -15,8 +15,6 @@ For more details see [build.gradle](build.gradle).
 ├─ gradle/        - Gradle definition files
 ├─ src/           - Source code
 │  ├─ main/       - Main implementation code 
-│  │  ├─ scala/
-│  ├─ test/       - Test code
 │  │  ├─ scala/
 ├─ build.gradle   - Build file for this project
 ├─ gradlew        - Gradle wrapper 
@@ -65,12 +63,12 @@ Create application assembly which can be directly submitted to Spark cluster:
 ```
 ./gradlew shadowJar
 ```
-The command creates jar file `build/libs/sparkling-water-droplet-app.jar` containing all necessary classes to run application on top of Spark cluster.
+The command creates jar file `build/libs/h2o-sw-mixed-api-droplet-app.jar` containing all necessary classes to run application on top of Spark cluster.
 
 Submit application to Spark cluster (in this case, local cluster is used):
 ```
 export MASTER="local[*]"
-$SPARK_HOME/bin/spark-submit --class water.droplets.SparklingWaterDroplet build/libs/sparkling-water-droplet-app.jar
+$SPARK_HOME/bin/spark-submit --class water.droplets.H2OSWMixedAPIDroplet build/libs/h2o-sw-mixed-api-droplet-app.jar
 ```
 
 

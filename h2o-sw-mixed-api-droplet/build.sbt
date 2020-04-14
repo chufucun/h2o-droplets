@@ -22,7 +22,7 @@ lazy val root = (project in file(".")).
   settings(commonSettings: _*).
   settings(
     // set the name of the project
-    name := "sparkling-water-droplet",
+    name := "h2o-sw-mixed-api-droplet",
 
     // setup dependencies
     libraryDependencies ++= commonDeps,
@@ -36,11 +36,11 @@ lazy val root = (project in file(".")).
     // set the main class for packaging the main jar
     // 'run' will still auto-detect and prompt
     // change Compile to Test to set it for the test jar
-    mainClass in (Compile, packageBin) := Some("water.droplets.SparklingWaterDroplet"),
+    mainClass in (Compile, packageBin) := Some("water.droplets.H2OSWMixedAPIDroplet"),
 
     // set the main class for the main 'run' task
     // change Compile to Test to set it for 'test:run'
-    mainClass in (Compile, run) := Some("water.droplets.SparklingWaterDroplet"),
+    mainClass in (Compile, run) := Some("water.droplets.H2OSWMixedAPIDroplet"),
 
     // disable updating dynamic revisions (including -SNAPSHOT versions)
     offline := true,

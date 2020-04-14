@@ -12,7 +12,7 @@ apply plugin: 'eclipse'
 
 // Support local launch of application 
 apply plugin: 'application'
-mainClassName = 'water.droplets.SparklingWaterDroplet'
+mainClassName = 'water.droplets.H2OSWMixedAPIDroplet'
 //
 // The build script settings to fetch plugins and put them on
 // classpath
@@ -36,7 +36,7 @@ ext {
     sparkMajorVersion = '2.4'
     sparkVersion = "${sparkMajorVersion}.0"
     // Latest stable version for the specified version of Spark
-    spWaterVersion = "${sparkMajorVersion}.7"
+    spWaterVersion = "${sparkMajorVersion}.9"
 
     // Scala binary version
     scalaBaseVersion = '2.11'
